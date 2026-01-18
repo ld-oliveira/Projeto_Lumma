@@ -39,10 +39,12 @@ Execute o script passando um tema como argumento:
 Exemplos:
 
 node index.js Software enginer
+
 node index.js brazil
+
 node index.js president
 
-# SE ESTIVER NO COMENTARIOS.JS UTILIZE
+SE ESTIVER NO COMENTARIOS.JS UTILIZE
 
 node comentarios.js Software enginer
 
