@@ -120,9 +120,6 @@ async function main() {
     console.log(todasNoticias[0]);
     console.log('Total capturado:', todasNoticias.length);
 
-    // Opcional: Salvar em arquivo para não perder os dados
-    fs.writeFileSync('noticias.json', JSON.stringify(todasNoticias, null, 2));
-
     // tratamentos para o excel
     const workbook = new ExcelJS.Workbook(); //excel em memoria
     const sheet = workbook.addWorksheet('Noticias');//cria planilha "noticias"
