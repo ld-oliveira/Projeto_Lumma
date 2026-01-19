@@ -168,15 +168,16 @@ main();
 
 /*observações talvez relevantes, 
 
-No teste de codigo vocês não especificam a lib a ser usava, no teste analitico foi citado a puppeteer, por logica eu penso que trabalharei com ela, mas durante pesquisas vi outras que também poderiam resolver isso, mas optei pela puppeteer por essa opção.
+No teste de código não foi especificada qual biblioteca deveria ser utilizada. No teste analítico foi citada a Puppeteer e, por lógica, entendi que seria esperado trabalhar com ela. Durante as pesquisas encontrei outras alternativas que também poderiam resolver o problema, mas optei pela Puppeteer por supor que vocês a utilizem no dia a dia.
 
-Não foi especificado se eu poderia ou não usar a API do NYT, com toda certeza nesse caso iria obter resultados melhores, mas penso que por ser um "exemplo" obviamente nem todo site que for necessario o scrapy, tera uma API propria.
+Também não foi especificado se seria permitido utilizar a API oficial do NYT. Com toda certeza, os resultados seriam mais consistentes e fáceis de obter. No entanto, considerei que por se tratar de um exemplo de scraping, nem sempre (raramente inclusive) o site a ser automatizado terá uma API própria disponível, então segui pela abordagem de automação via navegador.
 
-Tentei coletar menos de 50 noticias mas o NYT sempre me entregava mais, mesmo se eu digitasse letras aleatorias do tipo "suaijfbghsa" ou "gdsagbdfs" (deram mais de 600 resultados inclusive), com toda certeza eles tem alguma logica dentro da pesquisa para entregar muitos resultados sempre, mesmo que não tenha nada a ver com o que foi escrito.
+Tentei coletar menos de 50 noticias mas o NYT sempre me entregava mais, mesmo se eu digitasse letras aleatorias do tipo "suaijfbghsa" ou "gdsagbdfs" (deram mais de 600 resultados inclusive), com toda certeza eles tem alguma logica dentro da pesquisa para entregar muitos resultados sempre, mesmo quando o termo não faz muito sentido.
 
-Alguns artigos do NYT não tem titulo, acontece com certa frequencia inclusive, optei por entrar a data e o texto e deixar o titulo em branco, não foi especificado, mas consigo pensar em muitas maneiras de ou solucionar isso, ou ignorar essa noticia e ir para a proxima
+Notei que alguns artigos do NYT não possuem título visível, o que acontece com certa frequência. Nesses casos, optei por manter a data e o texto da notícia e deixar o título em branco. Não houve uma orientação específica sobre isso, mas consigo imaginar diferentes abordagens para tratar esse cenário, como ignorar a notícia ou tentar extrair o título de outra forma.
 
-Estou verdadeiramente empolgado para que tudo de certo e eu faça parte da equipe, fica meu agradecimento a oportunidade de fazer o teste e caso não seja dessa vez, espero ter alguma nova oportunidade na mesma, eu REALMENTE me interesso muito em contribuir com o crescimento,
-Obrigado, Leonardo 😊
+Estou verdadeiramente empolgado para que tudo dê certo e para ter a oportunidade de fazer parte da equipe. Agradeço pela oportunidade de realizar o teste e, caso não seja dessa vez, espero poder ter novas oportunidades no futuro. Tenho muito interesse em contribuir e evoluir junto com o time.
+
+ObrigadoLeonardo 😊
 */
 
