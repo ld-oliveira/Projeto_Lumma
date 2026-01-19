@@ -13,6 +13,8 @@ if (!tema) {
 
 console.log("tema", tema);
 
+
+//bloco para converter datas em ISO
 function formatarDataISO(textoData) {
     if (!textoData) return ''; 
 
@@ -24,6 +26,8 @@ function formatarDataISO(textoData) {
     return new Date(timestamp).toISOString().slice(0, 10); // transforma em YYYY-MM-DD
 }
 
+
+//bloco para extrair as noticias
 async function extrairNoticiasDaPagina(page) {
     await page.waitForSelector('li[data-testid="search-bodega-result"]'); //espera existir algum elemento de busca, no caso "li"
 
@@ -46,6 +50,7 @@ async function extrairNoticiasDaPagina(page) {
     return noticias;
 }
 
+//função principal
 async function main() {
     // headless: false para mostrar o navegador, true para rodar em segundo plano
     const browser = await puppeteer.launch({
@@ -82,6 +87,8 @@ async function main() {
         });
     }
 
+
+    //loop para pegar 50 results
     let qtdResultados = 0;
 
     while (qtdResultados < 50) { // se tiver menos de 50 na tela, tenta clicar em "show more"
@@ -158,3 +165,18 @@ async function main() {
 }
 
 main();
+
+/*observações talvez relevantes, 
+
+No teste de codigo vocês não especificam a lib a ser usava, no teste analitico foi citado a puppeteer, por logica eu penso que trabalharei com ela, mas durante pesquisas vi outras que também poderiam resolver isso, mas optei pela puppeteer por essa opção.
+
+Não foi especificado se eu poderia ou não usar a API do NYT, com toda certeza nesse caso iria obter resultados melhores, mas penso que por ser um "exemplo" obviamente nem todo site que for necessario o scrapy, tera uma API propria.
+
+Tentei coletar menos de 50 noticias mas o NYT sempre me entregava mais, mesmo se eu digitasse letras aleatorias do tipo "suaijfbghsa" ou "gdsagbdfs" (deram mais de 600 resultados inclusive), com toda certeza eles tem alguma logica dentro da pesquisa para entregar muitos resultados sempre, mesmo que não tenha nada a ver com o que foi escrito.
+
+Alguns artigos do NYT não tem titulo, acontece com certa frequencia inclusive, optei por entrar a data e o texto e deixar o titulo em branco, não foi especificado, mas consigo pensar em muitas maneiras de ou solucionar isso, ou ignorar essa noticia e ir para a proxima
+
+Estou verdadeiramente empolgado para que tudo de certo e eu faça parte da equipe, fica meu agradecimento a oportunidade de fazer o teste e caso não seja dessa vez, espero ter alguma nova oportunidade na mesma, eu REALMENTE me interesso muito em contribuir com o crescimento,
+Obrigado, Leonardo 😊
+*/
+

@@ -1,5 +1,8 @@
 # Coletor de Notícias do New York Times (NYTimes) para Excel
 
+> **Importante para avaliação:**  
+> Além do `index.js`, recomendo a leitura do arquivo **comentarios.js**, que contém explicações detalhadas do funcionamento do script e das decisões técnicas adotadas durante o desenvolvimento.
+
 ## Descrição
 
 Script em JavaScript (Node.js) que realiza buscas no site do New York Times a partir de um tema informado via linha de comando, coleta no mínimo 50 resultados quando disponíveis e exporta as informações para um arquivo Excel (.xlsx).
@@ -16,9 +19,21 @@ O Excel gerado contém uma única aba com as colunas:
 - Data de Publicação
 - Descrição
 
-# nota/explicação a parte
+## Estrutura do Projeto
 
-- existem 2 scrips, um index.js, limpo e organizado, e um comentarios.js para entendimento e analise de ideias
+O projeto possui **dois scripts principais**, com objetivos distintos:
+
+- **index.js**  
+  Versão limpa e objetiva do script, focada exclusivamente na execução do scraping e geração do Excel.
+
+- **comentarios.js**  
+  Versão **didática e comentada**, onde cada bloco relevante do código é explicado, incluindo:
+  - decisões técnicas adotadas
+  - tratamento de exceções
+  - limitações conhecidas do scraping
+  - observações sobre alternativas de implementação
+
+Este arquivo foi incluído **intencionalmente para facilitar o entendimento do raciocínio por trás da solução**
 
 ## Requisitos
 
@@ -38,15 +53,19 @@ npm install
 Execute o script passando um tema como argumento:
 Exemplos:
 
+```bash
 node index.js Software enginer
 
 node index.js brazil
 
 node index.js president
+```
 
-SE ESTIVER NO COMENTARIOS.JS UTILIZE
+Execução com comentários e explicações (versão comentada)
 
+```bash
 node comentarios.js Software enginer
+```
 
 ## Saída gerada
 
@@ -57,3 +76,7 @@ noticias-<termo-buscado>.xlsx
 Exemplo:
 
 noticias-brazil.xlsx
+
+## Observações adicionais
+
+Algumas considerações técnicas, limitações do scraping e decisões de projeto foram documentadas **diretamente no arquivo `comentarios.js`**, ao final do código, para manter o raciocínio e a explicação nesse arquivo, sendo funcional mas com o foco em explicar apenas.
